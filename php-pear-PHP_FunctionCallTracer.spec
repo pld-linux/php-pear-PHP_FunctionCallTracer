@@ -1,17 +1,17 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		PHP
 %define		_subclass	FunctionCallTracer
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	PHP_FunctionCallTracer
 Summary:	%{_pearname} - Function Call Tracer
 #Summary(pl.UTF-8):	%{_pearname} - 
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	0.RC1.1
+Release:	1
 License:	The BSD License
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
-# Source0-md5:	b63e0eefcac4fb0f78ded0cd63ef2463
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	ca727faf817b20a3e5de7296800f276c
 URL:		http://pear.php.net/package/PHP_FunctionCallTracer/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
