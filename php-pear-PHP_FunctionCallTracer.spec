@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	PHP_FunctionCallTracer
 Summary:	%{_pearname} - Function Call Tracer
-#Summary(pl.UTF-8):	%{_pearname} - 
+Summary(pl.UTF-8):	%{_pearname} - śledzenie wywołań funkcji
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	2
@@ -22,47 +22,34 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Creates a function calls debug trace. Functions arguments, returned
 parameters and watched variables are reported in the same section for
-each function call.
-The trace is available as an array, or can be displayed or written in
-a file.
-Traced variables can be processed by provided user functions for
-displaying purposes.
+each function call. The trace is available as an array, or can be
+displayed or written in a file. Traced variables can be processed by
+provided user functions for displaying purposes.
 
 This package is not a replacement for full fledged PHP debuggers. It
-is useful for (1) remote debugging, (2) to debug a complex sequence of
-function calls, (3) to display non text variables in a user readable
-format.
-
-(1) Remote debugging is sometimes the only option to debug a package
-that works fine on your system, e.g. a 32-bit OS, but breaks on a
-different system, e.g. a 64-bit OS, which you have no access to. A
-remote user who has the latter OS could run the package, then send you
-the trace for analysis.
-
-(2) It is sometimes difficult not to loose track of functions calls
-in some live debugging sessions even with top notch PHP
-editor/debuggers. The trace produced by this package may come handy
-and is easy to use in combination with the source code to track calls
-and variables.
-
-(3) Some variables native format does not always display well,
-typically:
-packed data and UTF-8 strings. They can be converted as they are
-being traced to a readable format by provided user functions. For
-example: converting binary strings to hexadecimal, or UTF-8 string to
-Unicode.
-
-Fully tested with phpUnit. Code coverage test close to 100%.
-
-Usage including trace examples is fully documented in docs/examples
-files.
+is useful for:
+- remote debugging,
+- to debug a complex sequence of function calls,
+- to display non text variables in a user readable format.
 
 In PEAR status of this package is: %{_status}.
 
-#%description -l pl.UTF-8
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl.UTF-8
+Ta klasa tworzy ślady diagnostyczne wywołań funkcji. Argumenty
+funkcji, zwracane parametry i podglądane zmienne są zwracane w tej
+samej sekcji dla każdego wywołania funkcji. Ślad jest dostępny jako
+tablica lub może być wyświetlany albo zapisywany do pliku. Śledzone
+zmienne mogą być przetwarzane do wyświetlenia przez funkcje
+dostarczone przez użytkownika.
+
+Ten pakiet nie jest zamiennikiem pełnych debuggerów PHP. Jest
+natomiast przydatny do:
+- zdalnej diagnostyki,
+- śledzenia złożonej sekwencji wywołań funkcji,
+- wyświetlania zmiennych nietekstowych w formacie czytelnym dla
+  użytkownika.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
