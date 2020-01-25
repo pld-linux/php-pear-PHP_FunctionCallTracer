@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		PHP
 %define		_subclass	FunctionCallTracer
 %define		_status		stable
